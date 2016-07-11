@@ -1,10 +1,22 @@
-@include keyframes(fadeOut) {
-	  0% {opacity: 1;}
-	100% {opacity: 0;}
+@mixin keyframes-fadeOut {
+  @include keyframes(fadeOut) {
+  	  0% {opacity: 1;}
+  	100% {opacity: 0;}
+  }
 }
 
 @mixin fadeOut($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-	@include animation-name(fadeOut);
+  $name: fadeOut;
+
+  @if (index($included-keyframes, $name) == null) {
+    @include keyframes-fadeOut;
+    $included-keyframes: append($included-keyframes, $name) !global;
+  }
+  @else {
+    $included-keyframes: append($included-keyframes, $name) !global;
+  }
+
+	@include animation-name($name);
 	@include count($count);
 	@include duration($duration);
 	@include delay($delay);

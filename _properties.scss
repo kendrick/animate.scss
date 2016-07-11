@@ -5,6 +5,8 @@ $functionDefault: ease !default;
 $fillDefault: both !default;
 $visibilityDefault: hidden !default;
 
+$included-keyframes: ();
+
 @mixin count($count: 1) {
   animation-iteration-count: $count;
 }

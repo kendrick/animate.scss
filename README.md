@@ -4,48 +4,22 @@ This is a port of Dan Eden's [Animate.css](http://daneden.github.io/animate.css/
 
 ## Doesn't this already exist somewhere else?
 
-Yes, there are plenty of other ports of this library. Many of them aren't very active projects and, honestly, I was just a little too lazy to submit my changes to those repositories.
+Yes, there are plenty of other ports of this library, but many of them aren't very active projects.
 
-Also, I was looking for something a little more flexible. This version allows you to import all animations at a whopping 53kb or only import what you need. It's a flavor thing.
+Also, I was looking for something a little more flexible. By leveraging SASS mixins, this version only outputs the CSS you actually need.
 
 ## Installing
-
-Grab it with Bower
-````
-bower install animatewithsass
-````
-
-The default import includes all animations. 
+The default import includes all animations.
 
 ```
 @import "animate.scss";
 ```
 
-Want to pick and choose which animations are imported? Go into animate.scss and comment out what you don't need.
-
-```
-// Always required
-@import 
-  "_properties";
-
-// Import the animations
-@import 
-  // "_attention/attention.scss", // This will not import
-  "_bouncing-entrances/bouncing-entrances.scss",
-  "_bouncing-exits/bouncing-exits.scss",
-  "_fading-entrances/fading-entrances.scss",
-  "_fading-exits/fading-exits.scss",
-  "_flippers/flippers.scss",
-  "_lightspeed/lightspeed.scss",
-  "_rotating-entrances/rotating-entrances.scss",
-  "_rotating-exits/rotating-exits.scss",
-  "_specials/specials.scss";
-```
-You only want one of two of the animations? You can `@import` the specific partials in animate.scss instead (Example: `@import "_attention/_bounce";`).
+_Everything_ in this library is a mixin, so your built CSS will only include animations that are actually used. No need to comment out `@import` statements.
 
 ## Usage
 
-Once your files have been added to your project and you've customized your `@imports`, you can start including the animations directly to your classes.
+Once you've imported the library, you can start include the animations directly in your CSS selectors.
 
 ```
 .your-class-name {
@@ -61,15 +35,15 @@ The mixin includes configurable options to customize the `delay`, `count` `durat
     $duration: 1s,
     $count: 2,
     $delay: .2s,
-    $function: ease, 
+    $function: ease,
     $fill: both
   );
 }
 ```
 
-## Just Want the CSS?
+### Keyframes
 
-You can have that too. Link up animate.css to your document `<head>` and add the animations like you would any class name.
+No need to include any keyframes! Each animation automatically imports its own. To avoid duplication, only the first selector of a given animation type will import keyframes for that animation.
 
 ## Licenses
 

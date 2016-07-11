@@ -1,10 +1,22 @@
-@include keyframes(flash) {
-	0%, 50%, 100% {opacity: 1;}
-	25%, 75% {opacity: 0;}
+@mixin keyframes-flash {
+  @include keyframes(flash) {
+  	0%, 50%, 100% {opacity: 1;}
+  	25%, 75% {opacity: 0;}
+  }
 }
 
 @mixin flash($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-	@include animation-name(flash);
+  $name: flash;
+
+  @if (index($included-keyframes, $name) == null) {
+    @include keyframes-flash;
+    $included-keyframes: append($included-keyframes, $name) !global;
+  }
+  @else {
+    $included-keyframes: append($included-keyframes, $name) !global;
+  }
+
+	@include animation-name($name);
 	@include count($count);
 	@include duration($duration);
 	@include delay($delay);
