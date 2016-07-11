@@ -4,9 +4,7 @@ This is a port of Dan Eden's [Animate.css](http://daneden.github.io/animate.css/
 
 ## Doesn't this already exist somewhere else?
 
-Yes, there are plenty of other ports of this library, but many of them aren't very active projects.
-
-Also, I was looking for something a little more flexible. By leveraging SASS mixins, this version only outputs the CSS you actually need.
+Yes, there are plenty of other ports of this library, but many of them aren't very active projects. Also, I wanted something flexible, and whose output was very lean. By leveraging SASS mixins, this version only outputs the CSS you actually need.
 
 ## Installing
 The default import includes all animations.
