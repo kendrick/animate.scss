@@ -1,21 +1,21 @@
 {
-  "name": "animatewithsass",
+  "name": "animatewithscss",
   "version": "3.2.1",
-  "description": "A SASS port of Dan Eden's Animate.css",
+  "description": "An SCSS port of Dan Eden's Animate.css",
   "main": "animate.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geoffgraham/animate.scss.git"
+    "url": "git+https://github.com/kendrick/animate.scss.git"
   },
-  "author": "geoffgraham <@geoffreygraham>",
+  "author": "kendrick <@kendrick>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/geoffgraham/animate.scss/issues"
+    "url": "https://github.com/kendrick/animate.scss/issues"
   },
-  "homepage": "https://github.com/geoffgraham/animate.scss#readme",
+  "homepage": "https://github.com/kendrick/animate.scss#readme",
   "keywords": [
     "animate.scss",
     "animate.css",
