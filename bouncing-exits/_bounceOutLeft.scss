@@ -14,7 +14,7 @@
   }
 }
 
-@mixin bounceOutLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin bounceOutLeft($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: bounceOutLeft;
 
   @if (index($included-keyframes, $name) == null) {

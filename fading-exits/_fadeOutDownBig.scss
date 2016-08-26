@@ -11,7 +11,7 @@
   }
 }
 
-@mixin fadeOutDownBig($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin fadeOutDownBig($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: fadeOutDownBig;
 
   @if (index($included-keyframes, $name) == null) {

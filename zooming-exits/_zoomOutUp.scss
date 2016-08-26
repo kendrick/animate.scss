@@ -14,7 +14,7 @@
   }
 }
 
-@mixin zoomOutUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin zoomOutUp($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: zoomOutUp;
 
   @if (index($included-keyframes, $name) == null) {

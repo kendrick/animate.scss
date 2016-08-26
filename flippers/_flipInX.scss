@@ -17,7 +17,7 @@
   }
 }
 
-@mixin flipInX($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin flipInX($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: flipInX;
 
   @if (index($included-keyframes, $name) == null) {

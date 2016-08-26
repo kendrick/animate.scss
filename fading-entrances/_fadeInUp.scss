@@ -10,7 +10,7 @@
   }
 }
 
-@mixin fadeInUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin fadeInUp($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: fadeInUp;
 
   @if (index($included-keyframes, $name) == null) {

@@ -19,7 +19,7 @@
   }
 }
 
-@mixin lightSpeedIn($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin lightSpeedIn($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: lightSpeedIn;
 
   @if (index($included-keyframes, $name) == null) {

@@ -13,7 +13,7 @@
   }
 }
 
-@mixin rotateOutUpLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin rotateOutUpLeft($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: rotateOutUpLeft;
 
   @if (index($included-keyframes, $name) == null) {

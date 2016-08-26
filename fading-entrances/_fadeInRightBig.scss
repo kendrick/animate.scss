@@ -11,7 +11,7 @@
   }
 }
 
-@mixin fadeInRightBig($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin fadeInRightBig($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: fadeInRightBig;
 
   @if (index($included-keyframes, $name) == null) {

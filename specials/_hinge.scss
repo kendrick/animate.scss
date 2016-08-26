@@ -28,7 +28,7 @@
   }
 }
 
-@mixin hinge($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin hinge($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: hinge;
 
   @if (index($included-keyframes, $name) == null) {

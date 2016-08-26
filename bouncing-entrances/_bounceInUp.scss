@@ -17,7 +17,7 @@
   }
 }
 
-@mixin bounceInUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin bounceInUp($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: bounceInUp;
 
   @if (index($included-keyframes, $name) == null) {

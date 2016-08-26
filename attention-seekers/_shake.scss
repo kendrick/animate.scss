@@ -6,7 +6,7 @@
   }
 }
 
-@mixin shake($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin shake($count, $duration, $delay, $timingFunction, $fill, $visibility) {
   $name: shake;
 
   @if (index($included-keyframes, $name) == null) {

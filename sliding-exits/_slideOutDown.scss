@@ -10,7 +10,7 @@
 	}
 }
 
-@mixin slideOutDown($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+@mixin slideOutDown($count, $duration, $delay, $timingFunction, $fill, $visibility) {
 	$name: slideOutDown;
 
   @if (index($included-keyframes, $name) == null) {
