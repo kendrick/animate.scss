@@ -52,3 +52,29 @@ $included-keyframes: ();
     @content;
   }
 }
+
+@mixin animation-properties($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $timingFunction: $timingFunctionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @if $count {
+    @include count($count);
+  }
+
+  @if $duration {
+    @include duration($duration);
+  }
+
+  @if $delay {
+    @include delay($delay);
+  }
+
+  @if $timingFunction {
+    @include timingFunction($timingFunction);
+  }
+
+  @if $fill {
+    @include fill($fill);
+  }
+
+  @if $visibility {
+    @include visibility($visibility);
+  }
+}

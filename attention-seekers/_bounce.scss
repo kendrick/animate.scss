@@ -6,7 +6,7 @@
 	}
 }
 
-@mixin bounce($count, $duration, $delay, $timingFunction, $fill, $visibility) {
+@mixin bounce($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $timingFunction: $timingFunctionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
 	$name: bounce;
 
   @if (index($included-keyframes, $name) == null) {
@@ -18,10 +18,5 @@
   }
 
 	@include animation-name($name);
-	@include count($count);
-	@include duration($duration);
-	@include delay($delay);
-	@include function($function);
-	@include fill-mode($fill);
-	@include visibility($visibility);
+  @include animation-properties($count, $duration, $delay, $timingFunction, $fill, $visibility);
 }
